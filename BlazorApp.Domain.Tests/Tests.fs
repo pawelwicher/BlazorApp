@@ -1,4 +1,4 @@
-namespace BlazorAppTests
+namespace BlazorApp.Domain.Tests
 
 open Xunit
 open FsUnit.Xunit
