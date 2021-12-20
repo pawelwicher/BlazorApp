@@ -185,38 +185,6 @@ module Data =
               "wyrzutek"
             ]
 
-    let private entry_2020_12_06 =
-        create
-            "2020_12_06"
-            [
-              "basket_case"
-              "breed"
-              "god_save"
-              "kiedy_bylem"
-              "seven_nation_army"
-              "sic"
-              "tata_dilera"
-            ]
-
-    let private entry_2020_12_13 =
-        create
-            "2020_12_13"
-            [
-              "breaking_the_law"
-              "where_is_my_mind"
-              "zostac_swirem"
-            ]
-
-    let private entry_2020_12_18 =
-        create
-            "2020_12_18"
-            [
-              "basket_case"
-              "breaking_the_law"
-              "kiedy_bylem"
-              "paranoid"
-            ]
-
     let private entry_2020_12_27 =
         create
             "2020_12_27"
@@ -229,6 +197,38 @@ module Data =
               "song_2"
               "to_co_czujesz"
               "wyrocznia"
+            ]
+
+    let private entry_2020_12_18 =
+        create
+            "2020_12_18"
+            [
+              "basket_case"
+              "breaking_the_law"
+              "kiedy_bylem"
+              "paranoid"
+            ]
+
+    let private entry_2020_12_13 =
+        create
+            "2020_12_13"
+            [
+              "breaking_the_law"
+              "where_is_my_mind"
+              "zostac_swirem"
+            ]
+
+    let private entry_2020_12_06 =
+        create
+            "2020_12_06"
+            [
+              "basket_case"
+              "breed"
+              "god_save"
+              "kiedy_bylem"
+              "seven_nation_army"
+              "sic"
+              "tata_dilera"
             ]
 
     let Items =
@@ -251,8 +251,8 @@ module Data =
             entry_2021_01_17
             entry_2021_01_10
             entry_2021_01_03
-            entry_2020_12_06
-            entry_2020_12_13
-            entry_2020_12_18
             entry_2020_12_27
+            entry_2020_12_18
+            entry_2020_12_13
+            entry_2020_12_06
         ] |> Seq.ofList
