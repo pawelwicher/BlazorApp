@@ -14,12 +14,12 @@ else
         @foreach (var item in items)
         {
             <li>
-                <p>@item.id</p>
+                <p>@item.Id</p>
                 <ol>
-                    @foreach (var name in item.names)
+                    @foreach (var name in item.Names)
                     {
                         <li>
-                            <a href="@GetHref(item.id, name)" target="_blank">@name</a>
+                            <a href="@GetHref(item.Id, name)" target="_blank">@name</a>
                         </li>
                     }
                 </ol>
