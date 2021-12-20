@@ -8,7 +8,7 @@ open BlazorApp.Domain
 module DataTests =
 
     [<Fact>]
-    let ``Items should be collection with some elements`` () =
-        let expected = true
-        let actual = Data.Items |> Seq.length |> (<) 0
+    let ``create function should create new Iten`` () =
+        let expected = { Id = "id"; Names = ["foo"; "bar"] |> Seq.ofList }
+        let actual = Data.create "id" ["foo"; "bar"]
         actual |> should equal expected

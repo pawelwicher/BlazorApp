@@ -29,11 +29,11 @@ else
 }
 
 @code {
-    private BlazorApp.Domain.Item[] items;
+    private Item[] items;
 
     protected override async Task OnInitializedAsync()
     {
-        items = await Http.GetFromJsonAsync<BlazorApp.Domain.Item[]>("/items");
+        items = await Http.GetFromJsonAsync<Item[]>("api/items");
     }
 
 
