@@ -14,12 +14,12 @@ else
         @foreach (var item in items)
         {
             <li>
-                <p>@item.Id</p>
+                <p>@item.id</p>
                 <ol>
-                    @foreach (var name in item.Names)
+                    @foreach (var name in item.names)
                     {
                         <li>
-                            <a href="@GetHref(item.Id, name)" target="_blank">@name</a>
+                            <a href="@GetHref(item.id, name)" target="_blank">@name</a>
                         </li>
                     }
                 </ol>
@@ -29,19 +29,13 @@ else
 }
 
 @code {
-    private Item[] items;
+    private BlazorApp.Domain.Item[] items;
 
     protected override async Task OnInitializedAsync()
     {
-        items = await Http.GetFromJsonAsync<Item[]>("data/data.json");
+        items = await Http.GetFromJsonAsync<BlazorApp.Domain.Item[]>("/items");
     }
 
-    public class Item
-    {
-        public string Id { get; set; }
-
-        public string[] Names { get; set; }
-    }
 
     public string GetHref(string date, string name) =>
         $"/movie/{date}/{name}";
