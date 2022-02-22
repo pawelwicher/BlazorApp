@@ -11,6 +11,21 @@ module Data =
     let create id names =
         { Id = id; Names = names |> Seq.ofList }
 
+    let private entry_2022_02_20 =
+        create
+            "2022_02_20"
+            [
+              "go_with_the_flow"
+              "klamstwo_to_nowa_prawda"
+            ]
+
+    let private entry_2022_01_16 =
+        create
+            "2022_01_16"
+            [
+              "last_caress"
+            ]
+
     let private entry_2022_01_09 =
         create
             "2022_01_09"
@@ -242,6 +257,8 @@ module Data =
 
     let Items =
         [
+            entry_2022_02_20
+            entry_2022_01_16
             entry_2022_01_09
             entry_2021_12_12
             entry_2021_11_07
