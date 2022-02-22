@@ -17,6 +17,7 @@ module Data =
             [
               "go_with_the_flow"
               "klamstwo_to_nowa_prawda"
+              "klamstwo_to_nowa_prawda_2"
             ]
 
     let private entry_2022_01_16 =
