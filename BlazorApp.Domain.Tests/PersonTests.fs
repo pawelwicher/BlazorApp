@@ -10,10 +10,10 @@ module DataTests =
     [<Fact>]
     let ``create function should create new Item`` () =
         let expected = {
-            Id = "id"
-            Names = ["foo"; "bar"] |> Seq.ofList
+            Id = 1
+            Name = "Bob"
         }
 
-        let actual = Data.create "id" ["foo"; "bar"]
+        let actual = Person.create 1 "FOO"
 
         actual |> should equal expected

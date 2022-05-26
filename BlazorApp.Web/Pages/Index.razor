@@ -1,43 +1,23 @@
 ﻿@page "/"
 
-@inject HttpClient Http
 
-<h1>Mind Behind</h1>
+<h1>Hello World from Blazor</h1>
 
-@if (items == null)
-{
-    <p>Loading...</p>
-}
-else
-{
-    <ul>
-        @foreach (var item in items)
-        {
-            <li>
-                <p>@item.Id</p>
-                <ol>
-                    @foreach (var name in item.Names)
-                    {
-                        <li>
-                            <a href="@GetHref(item.Id, name)" target="_blank">@name</a>
-                        </li>
-                    }
-                </ol>
-            </li>
-        }
-    </ul>
-}
+<ul>
+    @foreach (var person in persons)
+    {
+        <li>
+            <p>@person.Name (id @person.Id)</p>
+        </li>
+    }
+</ul>
 
 @code {
-    private Item[] items;
+    private Person[] persons;
 
     protected override async Task OnInitializedAsync()
     {
-        items = await Http.GetFromJsonAsync<Item[]>("api/items");
+        persons = await Task.FromResult(PersonModule.getPersons().ToArray());
     }
-
-
-    public string GetHref(string date, string name) =>
-        $"/movie/{date}/{name}";
 }
 
